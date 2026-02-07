@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details - FindAm Nigeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🔍 FindAm</h1>
+                <p class="tagline">Nigeria's Lost & Found Platform</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lost-items.html">Lost Items</a></li>
+                <li><a href="found-items.html">Found Items</a></li>
+                <li><a href="post-item.html" class="btn-post">Post Item</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="details-section">
+        <div class="container">
+            <div class="back-link">
+                <a href="#" onclick="goBack()">← Back to listings</a>
+            </div>
+
+            <div class="item-details-card" id="itemDetailsCard">
+                <!-- Item details will be loaded here by JavaScript -->
+            </div>
+
+            <div id="itemNotFound" class="no-results" style="display: none;">
+                <h2>Item Not Found</h2>
+                <p>The item you're looking for doesn't exist or has been removed.</p>
+                <a href="index.html" class="btn-primary">Return to Homepage</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="similar-items">
+        <div class="container">
+            <h2>Similar Items</h2>
+            <div class="items-grid" id="similarItemsGrid">
+                <!-- Similar items will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeContactModal()">&times;</span>
+            <h2>Contact Owner</h2>
+            <div id="contactInfo">
+                <!-- Contact information will be displayed here -->
+            </div>
+            <div class="modal-actions">
+                <button onclick="closeContactModal()" class="btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FindAm</h3>
+                    <p>Nigeria's trusted platform for lost and found items. Helping communities stay connected.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="lost-items.html">Lost Items</a></li>
+                        <li><a href="found-items.html">Found Items</a></li>
+                        <li><a href="post-item.html">Post Item</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: ogunmodedejoel1@gmail.com</p>
+                    <p>Phone: +2348132394812</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FindAm Nigeria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load item details on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadItemDetails();
+        });
+    </script>
+</body>
+</html>
