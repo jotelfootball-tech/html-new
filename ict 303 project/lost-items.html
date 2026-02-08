@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Items - FindAm Nigeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🔍 FindAm</h1>
+                <p class="tagline">Nigeria's Lost & Found Platform</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lost-items.html" class="active">Lost Items</a></li>
+                <li><a href="found-items.html">Found Items</a></li>
+                <li><a href="post-item.html" class="btn-post">Post Item</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Lost Items</h2>
+            <p>Browse items that people are searching for across Nigeria</p>
+        </div>
+    </section>
+
+    <section class="items-section">
+        <div class="container">
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Search lost items...">
+                <select id="categoryFilter" onchange="filterItems()">
+                    <option value="">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="documents">Documents (ID, Passport, etc.)</option>
+                    <option value="pets">Pets</option>
+                    <option value="jewelry">Jewelry & Accessories</option>
+                    <option value="bags">Bags & Luggage</option>
+                    <option value="keys">Keys</option>
+                    <option value="phones">Mobile Phones</option>
+                    <option value="wallets">Wallets & Purses</option>
+                    <option value="others">Others</option>
+                </select>
+                <select id="locationFilter" onchange="filterItems()">
+                    <option value="">All Locations</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Abuja">Abuja</option>
+                    <option value="Port Harcourt">Port Harcourt</option>
+                    <option value="Ibadan">Ibadan</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Benin City">Benin City</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Others">Others</option>
+                </select>
+                <button onclick="filterItems()">Filter</button>
+            </div>
+
+            <div class="items-grid" id="lostItemsGrid">
+                <!-- Items will be loaded here by JavaScript -->
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>No lost items found matching your criteria.</p>
+                <a href="post-item.html" class="btn-primary">Post a Lost Item</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FindAm</h3>
+                    <p>Nigeria's trusted platform for lost and found items. Helping communities stay connected.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="lost-items.html">Lost Items</a></li>
+                        <li><a href="found-items.html">Found Items</a></li>
+                        <li><a href="post-item.html">Post Item</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: ogunmodedejoel1@gmail.com</p>
+                    <p>Phone: +2348132394812</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FindAm Nigeria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load lost items on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadLostItems();
+        });
+    </script>
+</body>
+</html>
