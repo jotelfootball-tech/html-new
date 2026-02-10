@@ -6,30 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radian Motors - Drive with Purpose</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Goldman:wght@400;700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Navigation Header -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#models" class="nav-link">Models</a></li>
-                </ul>
-                <div class="logo">
-                    <img src="images/Group 1.png" alt="Radian Motors">
-                </div>
-                <ul class="nav-menu-right">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        <div class="nav-container">
+            <ul class="nav-left">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#models" class="nav-link">Models</a></li>
+            </ul>
+
+            <div class="nav-logo">
+                <img src="/images/Group 1.png" alt="Radian Motors">
+                <span class="brand-name">Radian Motors</span>
             </div>
+
+            <ul class="nav-right">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                        <!-- Sun Icon -->
+                        <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" style="display: none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#models" class="nav-link">Models</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -38,8 +77,10 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Drive with Purpose</h1>
-                    <h2 class="hero-subtitle">Find Your Perfect Drive</h2>
+                    <div class="hero-conctent">
+                        <h1>Drive with Purpose</h1>
+                        <p>Find Your Perfect Drive</p>
+                    </div>
 
                     <div class="highlight-section">
                         <h3 class="highlight-title">Highlight</h3>

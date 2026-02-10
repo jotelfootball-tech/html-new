@@ -262,3 +262,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Console message
 console.log('Radian Motors - Drive with Purpose 🚗');
+
+// Theme Toggle Implementation
+const themeBtn = document.getElementById('theme-toggle');
+const sunIcon = document.querySelector('.theme-icon.sun');
+const moonIcon = document.querySelector('.theme-icon.moon');
+const htmlElement = document.documentElement;
+
+// Function to set theme
+const setTheme = (theme) => {
+    if (theme === 'light') {
+        htmlElement.setAttribute('data-theme', 'light');
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+        localStorage.setItem('theme', 'light');
+    } else {
+        htmlElement.removeAttribute('data-theme');
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+        localStorage.setItem('theme', 'dark');
+    }
+};
+
+// Initialize Theme
+const savedTheme = localStorage.getItem('theme');
+// Check if user has a saved preference, otherwise default to dark (or system preference if we wanted)
+if (savedTheme === 'light') {
+    setTheme('light');
+} else {
+    setTheme('dark');
+}
+
+// Event Listener
+if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        if (currentTheme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    });
+}
