@@ -1,0 +1,24 @@
+{
+  "name": "lost-and-found-nija",
+  "version": "1.0.0",
+  "description": "Lost and Found Notice Board for Nigeria",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "lost",
+    "found",
+    "nigeria",
+    "notice-board"
+  ],
+  "author": "Antigravity",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}

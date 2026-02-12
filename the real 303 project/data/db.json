@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1770921646541",
+    "createdAt": "2026-02-12T18:40:46.541Z",
+    "title": "Test Item",
+    "description": "This is a test item",
+    "category": "electronics",
+    "type": "lost",
+    "location": "Lagos",
+    "dateLostFound": "2023-10-27",
+    "contactName": "Tester",
+    "contactPhone": "08000000000",
+    "contactEmail": "test@test.com",
+    "imageUrl": null
+  }
+]
